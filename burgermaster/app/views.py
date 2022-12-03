@@ -7,4 +7,9 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('<h1> Welcome </h1>')
+    # ditctionary context usually is used as parameter to give to frontendf etc.
+
+    context = {
+        'name': 'Patrick'
+    }
+    return render(request,'index.html', context)
